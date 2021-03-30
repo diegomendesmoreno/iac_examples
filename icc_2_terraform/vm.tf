@@ -65,10 +65,16 @@ resource "null_resource" "deploy_db" {
         }
         inline = [
             "sudo apt-get update",
+            "echo 'Installing MySQL'",
             "sudo apt-get install -y mysql-server",
             "sudo cp -f /home/usuario/mysql/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf",
             "sudo service mysql restart",
             "sleep 20",
+            "echo 'MySQL installed'",
+            "type mysql",
+            "echo 'Configuring MySQL'",
+            "sudo mysql < /home/usuario/mysql/config_usuario.sql",
+            "echo 'MySQL configured'"
         ]
     }
 }

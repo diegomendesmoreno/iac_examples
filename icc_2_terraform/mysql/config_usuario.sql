@@ -1,0 +1,5 @@
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'Senh@do4zure';
+GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'localhost' WITH GRANT OPTION;
+CREATE USER 'usuario'@'%' IDENTIFIED BY 'Senh@do4zure';
+GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
