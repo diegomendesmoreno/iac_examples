@@ -11,7 +11,7 @@
 ```
 git clone https://github.com/diegomendesmoreno/iac_examples.git
 
-cd iac_examples
+cd iac_examples/icc_2_terraform
 
 
 terraform init
